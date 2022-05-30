@@ -1,12 +1,12 @@
 partitioning=gd # gd or qt
 method=bf # bf or ps
 K=10
-N=100
-NameNode=panagiotis-lubuntu
+N=1000
+NameNode=Hadoopmaster
 queryDir=input
 trainingDir=input
-queryDataset=query-dataset.txt
-trainingDataset=NApppointNNew.txt
+queryDataset=linearwaterNNew_sub_2.8M.txt
+trainingDataset=paskrsNNew_obj.txt
 gnnDir=gnn
 treeDir=sampletree
 treeFileName=qtree.ser
