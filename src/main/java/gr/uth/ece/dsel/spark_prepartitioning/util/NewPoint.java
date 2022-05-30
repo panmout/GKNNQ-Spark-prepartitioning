@@ -15,10 +15,6 @@ public final class NewPoint implements Function<String, Point>
 	@Override
 	public final Point call(String line)
 	{
-		String[] data = line.trim().split(sep);
-		int id = Integer.parseInt(data[0]);
-		double x = Double.parseDouble(data[1]);
-		double y = Double.parseDouble(data[2]);
-		return new Point(id, x, y);
+		return GnnFunctions.newPoint(line, this.sep);
 	}
 }
