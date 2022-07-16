@@ -20,4 +20,3 @@ gr/uth/ece/dsel/spark_prepartitioning/util/CellTpointsQT.class
 gr/uth/ece/dsel/spark_prepartitioning/util/Node.class
 gr/uth/ece/dsel/spark_prepartitioning/util/OverlapsContainCell.class
 gr/uth/ece/dsel/spark_prepartitioning/util/CellTpointsGD.class
-gr/uth/ece/dsel/spark_prepartitioning/util/NewPoint.class
