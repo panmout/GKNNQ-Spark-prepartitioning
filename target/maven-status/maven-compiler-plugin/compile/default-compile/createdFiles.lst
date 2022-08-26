@@ -1,6 +1,6 @@
 gr/uth/ece/dsel/spark_prepartitioning/util/WriteLocalFiles.class
-gr/uth/ece/dsel/spark_prepartitioning/util/GetOverlaps.class
 gr/uth/ece/dsel/spark_prepartitioning/preliminary/MbrCentroid.class
+gr/uth/ece/dsel/spark_prepartitioning/util/GetOverlaps.class
 gr/uth/ece/dsel/spark_prepartitioning/util/CreateQTreeArray.class
 gr/uth/ece/dsel/spark_prepartitioning/util/GnnFunctions.class
 gr/uth/ece/dsel/spark_prepartitioning/util/PointYComparator.class
@@ -18,5 +18,5 @@ gr/uth/ece/dsel/spark_prepartitioning/util/IdDistComparator.class
 gr/uth/ece/dsel/spark_prepartitioning/util/IterablePointsCount.class
 gr/uth/ece/dsel/spark_prepartitioning/util/CellTpointsQT.class
 gr/uth/ece/dsel/spark_prepartitioning/util/Node.class
-gr/uth/ece/dsel/spark_prepartitioning/util/OverlapsContainCell.class
 gr/uth/ece/dsel/spark_prepartitioning/util/CellTpointsGD.class
+gr/uth/ece/dsel/spark_prepartitioning/util/OverlapsContainCell.class
