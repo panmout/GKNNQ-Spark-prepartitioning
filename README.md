@@ -62,5 +62,3 @@ After that, run the script file and a copy of the created quad tree, as *qtree.s
 
 ### Delete local files
 To delete all locally created files, such as preliminary and intermediate phases output, run *delete-files.sh* script file
-
-
