@@ -29,8 +29,8 @@ If *plane sweep* method is selected, then the script file *SortQueryPoints.sh* m
 The algorithm also needs to find the boundaries of the *query* dataset MBR and the coordinates of its centroid. Edit and run the *mbrCentroid.sh* script file.
 
 Finally, user must edit script file *gnn.sh* and provide the appropriate parameters:
-- partitioning: *gd* or *qt* for grid or quad tree partitioning, respectively
-- method: *bf* or *ps* for brute force and quad tree computational methods, respectively
+- partitioning: *gd* or *qt* for *grid* or *quad tree* partitioning, respectively
+- method: *bf* or *ps* for *brute force* or *plane sweep* computational methods, respectively
 - K: the desired number of neighbors
 - N: the grid space decomposition parameter, it creates N\*N equal sized square cells
 - NameNode: the name of the machine used as Namenode of the Hadoop cluster
