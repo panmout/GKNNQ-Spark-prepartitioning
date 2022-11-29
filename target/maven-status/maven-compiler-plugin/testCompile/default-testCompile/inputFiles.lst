@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /home/pmoutafis/Dropbox/moutafis_phd/GNN/GKNN-Spark-prepartitioning/src/test/java/gr/uth/ece/dsel/spark_prepartitioning/AppTest.java
+=======
+/home/pmoutafis/GKNN/spark-prepartitioning/src/test/java/gr/uth/ece/dsel/spark_prepartitioning/AppTest.java
+>>>>>>> b674c9bdf016ef50da742ce80edd3513d74403b5
