@@ -1,18 +1,15 @@
 gr/uth/ece/dsel/spark_prepartitioning/util/WriteLocalFiles.class
-gr/uth/ece/dsel/spark_prepartitioning/preliminary/MbrCentroid.class
-<<<<<<< HEAD
-=======
 gr/uth/ece/dsel/spark_prepartitioning/util/GetOverlaps.class
->>>>>>> b674c9bdf016ef50da742ce80edd3513d74403b5
-gr/uth/ece/dsel/spark_prepartitioning/util/GnnFunctions.class
+gr/uth/ece/dsel/spark_prepartitioning/preliminary/MbrCentroid.class
 gr/uth/ece/dsel/spark_prepartitioning/util/CreateQTreeArray.class
+gr/uth/ece/dsel/spark_prepartitioning/util/GnnFunctions.class
 gr/uth/ece/dsel/spark_prepartitioning/util/PointYComparator.class
 gr/uth/ece/dsel/spark_prepartitioning/util/TpointsInNonPrunedCells.class
 gr/uth/ece/dsel/spark_prepartitioning/main/Main.class
 gr/uth/ece/dsel/spark_prepartitioning/preliminary/QuadtreeArray.class
 gr/uth/ece/dsel/spark_prepartitioning/util/IdDist.class
-gr/uth/ece/dsel/spark_prepartitioning/util/PointXComparator.class
 gr/uth/ece/dsel/spark_prepartitioning/util/CellPruningHeuristicsQT.class
+gr/uth/ece/dsel/spark_prepartitioning/util/PointXComparator.class
 gr/uth/ece/dsel/spark_prepartitioning/util/PsNeighbors.class
 gr/uth/ece/dsel/spark_prepartitioning/util/Point.class
 gr/uth/ece/dsel/spark_prepartitioning/util/BfNeighbors.class

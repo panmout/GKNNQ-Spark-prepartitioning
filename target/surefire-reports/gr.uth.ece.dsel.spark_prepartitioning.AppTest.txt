@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: gr.uth.ece.dsel.spark_prepartitioning.AppTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in gr.uth.ece.dsel.spark_prepartitioning.AppTest
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 s - in gr.uth.ece.dsel.spark_prepartitioning.AppTest
->>>>>>> b674c9bdf016ef50da742ce80edd3513d74403b5
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.323 s - in gr.uth.ece.dsel.spark_prepartitioning.AppTest
