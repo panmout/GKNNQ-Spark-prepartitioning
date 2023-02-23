@@ -53,6 +53,7 @@ public class Main
 		final String phase15 = args[12];
 		final boolean heuristics = Boolean.parseBoolean(args[13]);
 		final boolean fastsums = Boolean.parseBoolean(args[14]);
+		final char systemType = args[15].charAt(0); // "L" for local or "D" for distributed
 	    
 		final String username = System.getProperty("user.name"); // get user name
 	    ArrayList<Point> qpoints = new ArrayList<Point>();
@@ -85,7 +86,16 @@ public class Main
 	    System.out.println("Input arguments: \n" + arguments);
 	  	
 		// Spark conf
-	  	SparkConf sparkConf = new SparkConf().setAppName("gnn-spark").setMaster(String.format("spark://%s:7077", nameNode)); //("local[*]");
+		// check system type (local or distributed)
+		String master = "";
+		if (systemType == 'L')
+			master = "local[*]";
+		else if (systemType == 'D')
+			master = String.format("spark://%s:7077", nameNode);
+		else
+			throw new IllegalArgumentException("systemType arg must be 'L' for local or 'D' for distributed");
+
+		SparkConf sparkConf = new SparkConf().setAppName("aknn-spark").setMaster(master);
 		JavaSparkContext jsc = new JavaSparkContext(sparkConf);
 		
 		// Hadoop FS
