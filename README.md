@@ -28,7 +28,7 @@ If *plane sweep* method is selected, then the script file *SortQueryPoints.sh* m
 
 The algorithm also needs to find the boundaries of the *query* dataset MBR and the coordinates of its centroid. Edit and run the *mbrCentroid.sh* script file.
 
-Finally, user must edit script file *gnn.sh* and provide the appropriate parameters:
+Finally, user must edit script file *run.sh* and provide the appropriate parameters:
 - partitioning: *gd* or *qt* for *grid* or *quad tree* partitioning, respectively
 - method: *bf* or *ps* for *brute force* or *plane sweep* computational methods, respectively
 - K: the desired number of neighbors
@@ -44,8 +44,9 @@ Finally, user must edit script file *gnn.sh* and provide the appropriate paramet
 - phase15: *MBR* or *centroid*, selects the desired refining method
 - heuristics: *true* or *false* to turn the pruning heuristics on or off
 - fastSums: *true* or *false* to turn the fast sums computational method on or off
+- systemType: *L* for local and *D* for distributed system
 
-After that, just type /run.sh
+After that, execute *run.sh*
 
 ### How to create a quad tree binary file
 There are two different script files, *createQTree.sh* and *createQTreeArray.sh* that create quad tree files using different methods. The first one is recommended and activated by default.
