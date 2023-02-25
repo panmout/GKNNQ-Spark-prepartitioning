@@ -95,7 +95,7 @@ public class Main
 		else
 			throw new IllegalArgumentException("systemType arg must be 'L' for local or 'D' for distributed");
 
-		SparkConf sparkConf = new SparkConf().setAppName("aknn-spark").setMaster(master);
+		SparkConf sparkConf = new SparkConf().setAppName("gknn-prepartitioning-spark").setMaster(master);
 		JavaSparkContext jsc = new JavaSparkContext(sparkConf);
 		
 		// Hadoop FS

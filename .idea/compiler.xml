@@ -9,5 +9,8 @@
         <module name="gknnq-spark-prepartitioning" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gknn-spark-prepartitioning" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
