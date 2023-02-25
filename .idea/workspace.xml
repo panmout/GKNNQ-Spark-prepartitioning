@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3895f64a-dcd8-4f0c-8645-c40bd914e6d1" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/Main.java&#10;#&#9;target/classes/gr/uth/ece/dsel/spark_prepartitioning/main/Main.class&#10;#&#9;target/maven-archiver/pom.properties&#10;#&#9;target/surefire-reports/TEST-gr.uth.ece.dsel.spark_prepartitioning.AppTest.xml&#10;#&#9;target/surefire-reports/gr.uth.ece.dsel.spark_prepartitioning.AppTest.txt" />
+    <list default="true" id="3895f64a-dcd8-4f0c-8645-c40bd914e6d1" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/Main.java&#10;#&#9;target/classes/gr/uth/ece/dsel/spark_prepartitioning/main/Main.class&#10;#&#9;target/maven-archiver/pom.properties&#10;#&#9;target/surefire-reports/TEST-gr.uth.ece.dsel.spark_prepartitioning.AppTest.xml&#10;#&#9;target/surefire-reports/gr.uth.ece.dsel.spark_prepartitioning.AppTest.txt">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/preliminary/MbrCentroid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/preliminary/Qtree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/preliminary/QuadtreeArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/BfNeighbors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/CellPruningHeuristicsGD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/CellPruningHeuristicsQT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/CellTpointsGD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/CellTpointsQT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/CreateQTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/CreateQTreeArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/GetOverlaps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/GnnFunctions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/IdDist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/IdDistComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/IterablePointsCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/NeighborsAccumulatorV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/OverlapsContainCell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/Point.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/PointXComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/PointYComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/PsNeighbors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/TpointsInNonPrunedCells.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/java/gr/uth/ece/dsel/spark_prepartitioning/util/WriteLocalFiles.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677363808589</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/Main.java&#10;#&#9;target/classes/gr/uth/ece/dsel/spark_prepartitioning/main/Main.class&#10;#&#9;target/maven-archiver/pom.properties&#10;#&#9;target/surefire-reports/TEST-gr.uth.ece.dsel.spark_prepartitioning.AppTest.xml&#10;#&#9;target/surefire-reports/gr.uth.ece.dsel.spark_prepartitioning.AppTest.txt">
+      <created>1677364152746</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677364152746</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
