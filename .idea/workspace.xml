@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3895f64a-dcd8-4f0c-8645-c40bd914e6d1" name="Changes" comment="Created unified jar with command line argument for local and distributed systems" />
+    <list default="true" id="3895f64a-dcd8-4f0c-8645-c40bd914e6d1" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/Main.java&#10;#&#9;target/classes/gr/uth/ece/dsel/spark_prepartitioning/main/Main.class&#10;#&#9;target/maven-archiver/pom.properties&#10;#&#9;target/surefire-reports/TEST-gr.uth.ece.dsel.spark_prepartitioning.AppTest.xml&#10;#&#9;target/surefire-reports/gr.uth.ece.dsel.spark_prepartitioning.AppTest.txt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +108,28 @@
       <option name="project" value="LOCAL" />
       <updated>1677183073139</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created unified jar with command line argument for local and distributed systems">
+      <created>1677363149446</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677363149446</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/Main.java&#10;#&#9;target/classes/gr/uth/ece/dsel/spark_prepartitioning/main/Main.class&#10;#&#9;target/maven-archiver/pom.properties&#10;#&#9;target/surefire-reports/TEST-gr.uth.ece.dsel.spark_prepartitioning.AppTest.xml&#10;#&#9;target/surefire-reports/gr.uth.ece.dsel.spark_prepartitioning.AppTest.txt">
+      <created>1677363656059</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677363656059</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/Main.java&#10;#&#9;target/classes/gr/uth/ece/dsel/spark_prepartitioning/main/Main.class&#10;#&#9;target/maven-archiver/pom.properties&#10;#&#9;target/surefire-reports/TEST-gr.uth.ece.dsel.spark_prepartitioning.AppTest.xml&#10;#&#9;target/surefire-reports/gr.uth.ece.dsel.spark_prepartitioning.AppTest.txt">
+      <created>1677363808589</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677363808589</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +145,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created unified jar with command line argument for local and distributed systems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created unified jar with command line argument for local and distributed systems" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/Main.java&#10;#&#9;target/classes/gr/uth/ece/dsel/spark_prepartitioning/main/Main.class&#10;#&#9;target/maven-archiver/pom.properties&#10;#&#9;target/surefire-reports/TEST-gr.uth.ece.dsel.spark_prepartitioning.AppTest.xml&#10;#&#9;target/surefire-reports/gr.uth.ece.dsel.spark_prepartitioning.AppTest.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;src/main/java/gr/uth/ece/dsel/spark_prepartitioning/main/Main.java&#10;#&#9;target/classes/gr/uth/ece/dsel/spark_prepartitioning/main/Main.class&#10;#&#9;target/maven-archiver/pom.properties&#10;#&#9;target/surefire-reports/TEST-gr.uth.ece.dsel.spark_prepartitioning.AppTest.xml&#10;#&#9;target/surefire-reports/gr.uth.ece.dsel.spark_prepartitioning.AppTest.txt" />
   </component>
 </project>
