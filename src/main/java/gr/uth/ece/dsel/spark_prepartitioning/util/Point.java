@@ -17,32 +17,32 @@ public final class Point implements Serializable
 		setY(y1);
 	}
 	
-	public final void setId(int id1)
+	public void setId(int id1)
 	{
 		this.id = id1;
 	}
 	
-	public final void setX(double x1)
+	public void setX(double x1)
 	{
 		this.x = x1;
 	}
 	
-	public final void setY(double y1)
+	public void setY(double y1)
 	{
 		this.y = y1;
 	}
 	
-	public final int getId()
+	public int getId()
 	{
 		return this.id;
 	}
 	
-	public final double getX()
+	public double getX()
 	{
 		return this.x;
 	}
 	
-	public final double getY()
+	public double getY()
 	{
 		return this.y;
 	}
