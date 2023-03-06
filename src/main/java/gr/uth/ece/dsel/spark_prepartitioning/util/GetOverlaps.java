@@ -7,13 +7,13 @@ import java.util.Iterator;
 
 public final class GetOverlaps
 {
-	private HashMap<String, Integer> cell_tpoints; // hashmap of training points per cell list from MR1 {[cell_id, number of training points]}
-	private HashSet<String> overlaps; // set of overlapping cells
-	private double[] mbrC = new double[7]; // mbrCentroid array
+	private final HashMap<String, Integer> cell_tpoints; // hashmap of training points per cell list from MR1 {[cell_id, number of training points]}
+	private final HashSet<String> overlaps; // set of overlapping cells
+	private final double[] mbrC; // mbrCentroid array
 	private int N; // N*N cells
-	private int K; // GNN K
+	private final int K; // GNN K
 	private Node root; // create root node
-	private String phase15; // mbr or centroid
+	private final String phase15; // mbr or centroid
 	private String partitioning;
 	
 	public GetOverlaps(int k, double[] mbrCentroid, HashMap<String, Integer> phase1output, String method)
@@ -22,47 +22,39 @@ public final class GetOverlaps
 		this.mbrC = Arrays.copyOf(mbrCentroid, mbrCentroid.length);
 		this.K = k;
 		this.phase15 = method;
-		this.overlaps = new HashSet<String>();
+		this.overlaps = new HashSet<>();
 	}
 	
-	public final void setPartition(String partition)
+	public void setPartition(String partition)
 	{
 		this.partitioning = partition;
 	}
 	
-	public final void setN(int n)
+	public void setN(int n)
 	{
 		this.N = n;
 	}
 	
-	public final void setRoot(Node node)
+	public void setRoot(Node node)
 	{
 		this.root = node;
 	}
 	
-	public final HashSet<String> getOverlaps()
+	public HashSet<String> getOverlaps()
 	{
 		if(this.phase15.equals("mbr"))
 		{
 			if(this.partitioning.equals("gd"))
-			{
 				mbrOverlapsGD();
-			}
 			else if(this.partitioning.equals("qt"))
-			{
 				mbrOverlapsQT();
-			}
 		}
 		else if(this.phase15.equals("centroid"))
 		{
 			if(this.partitioning.equals("gd"))
-			{
 				centroidOverlapsGD();
-			}
 			else if(this.partitioning.equals("qt"))
-			{
 				centroidOverlapsQT();
-			}
 		}
 		return this.overlaps;
 	}
@@ -72,7 +64,7 @@ public final class GetOverlaps
 	 */
 	
 	// find grid MBR overlaps
-	private final void mbrOverlapsGD()
+	private void mbrOverlapsGD()
 	{
 		final double ds = 1.0/this.N; // interval ds (cell width)
 		
@@ -114,15 +106,15 @@ public final class GetOverlaps
 				overlaps_points += this.cell_tpoints.get(cell); // add this overlap's training points
 	        
 	        // increase size of MBR for next loop (each side by 10%)
-	        xmin = 0.9*xmin;
-	        xmax = (1.1*xmax <= 1.0) ? 1.1*xmax : xmax;
-	        ymin = 0.9*ymin;
-	        ymax = (1.1*ymax <= 1.0) ? 1.1*ymax : ymax;
+	        xmin = 0.9 * xmin;
+	        xmax = (1.1 * xmax <= 1.0) ? 1.1 * xmax : xmax;
+	        ymin = 0.9 * ymin;
+	        ymax = (1.1 * ymax <= 1.0) ? 1.1 * ymax : ymax;
 	    }
 	}
 	
 	// find quadtree MBR overlaps
-	private final void mbrOverlapsQT()
+	private void mbrOverlapsQT()
 	{
 		double xmin = this.mbrC[0]; // get MBR borders from array
 		double xmax = this.mbrC[1];
@@ -146,14 +138,14 @@ public final class GetOverlaps
 					switch(cell.charAt(i))
 					{
 						case '0':
-							y0 += 1.0/Math.pow(2, i + 1); // if digit = 0 increase y0
+							y0 += 1.0 / Math.pow(2, i + 1); // if digit = 0 increase y0
 							break;
 						case '1':
-							x0 += 1.0/Math.pow(2, i + 1); // if digit = 1 increase x0
-							y0 += 1.0/Math.pow(2, i + 1); // and y0
+							x0 += 1.0 / Math.pow(2, i + 1); // if digit = 1 increase x0
+							y0 += 1.0 / Math.pow(2, i + 1); // and y0
 							break;
 						case '3':
-							x0 += 1.0/Math.pow(2, i + 1); // if digit = 3 increase x0
+							x0 += 1.0 / Math.pow(2, i + 1); // if digit = 3 increase x0
 							break;
 					}
 				}
@@ -175,15 +167,15 @@ public final class GetOverlaps
 				overlaps_points += this.cell_tpoints.get(cell); // add this overlap's training points
 				
 			// increase size of MBR for next loop (each side by 10%)
-			xmin = 0.9*xmin;
-			xmax = (1.1*xmax <= 1.0) ? 1.1*xmax : xmax;
-			ymin = 0.9*ymin;
-			ymax = (1.1*ymax <= 1.0) ? 1.1*ymax : ymax;
+			xmin = 0.9 * xmin;
+			xmax = (1.1 * xmax <= 1.0) ? 1.1 * xmax : xmax;
+			ymin = 0.9 * ymin;
+			ymax = (1.1 * ymax <= 1.0) ? 1.1 * ymax : ymax;
 		}
 	}
 	
 	// find grid centroid overlaps
-	private final void centroidOverlapsGD()
+	private void centroidOverlapsGD()
 	{
 		/*
 		Cell array (numbers inside cells are cell_id)
@@ -272,10 +264,10 @@ public final class GetOverlaps
 		}
 		
 		// top-bottom rows, far left-right columns
-		final HashSet<Integer> south_row = new HashSet<Integer>(); // no S, SE, SW for cells in this set
-		final HashSet<Integer> north_row = new HashSet<Integer>(); // no N, NE, NW for cells in this set
-		final HashSet<Integer> west_column = new HashSet<Integer>(); // no W, NW, SW for cells in this set
-		final HashSet<Integer> east_column = new HashSet<Integer>(); // no E, NE, SE for cells in this set
+		final HashSet<Integer> south_row = new HashSet<>(); // no S, SE, SW for cells in this set
+		final HashSet<Integer> north_row = new HashSet<>(); // no N, NE, NW for cells in this set
+		final HashSet<Integer> west_column = new HashSet<>(); // no W, NW, SW for cells in this set
+		final HashSet<Integer> east_column = new HashSet<>(); // no E, NE, SE for cells in this set
 		
 		for (int i = 0; i < this.N; i++) // filling sets
 		{
@@ -286,10 +278,10 @@ public final class GetOverlaps
 		}
 		
 		// set of surrounding cells
-		final HashSet<Integer> surrounding_cells = new HashSet<Integer>();
+		final HashSet<Integer> surrounding_cells = new HashSet<>();
 		
 		// dummy set of cells to be added (throws ConcurrentModificationException if trying to modify set while traversing it)
-		final HashSet<Integer> addSquaresList = new HashSet<Integer>();
+		final HashSet<Integer> addSquaresList = new HashSet<>();
 		
 		// first element is centroid cell
 		surrounding_cells.add(intCentroidCell);
@@ -370,7 +362,7 @@ public final class GetOverlaps
 					stopRunY = true;
 				
 				// if all stop vars are set to 'true', stop loop
-				if (stopRunX == true && stopRunY == true)
+				if (stopRunX && stopRunY)
 					runAgain = false;
 			}
 			
@@ -456,7 +448,7 @@ public final class GetOverlaps
 	}
 	
 	// find quadtree centroid overlaps
-	private final void centroidOverlapsQT()
+	private void centroidOverlapsQT()
 	{
 		// centroid coords
     	final double xc = this.mbrC[4];
@@ -513,7 +505,7 @@ public final class GetOverlaps
 		}
 	}
 	
-	private final void rangeQuery(double x, double y, double r, Node node, String address)
+	private void rangeQuery(double x, double y, double r, Node node, String address)
 	{
 		if (node.getNW() == null) // leaf node
 			this.overlaps.add(address);
@@ -535,7 +527,7 @@ public final class GetOverlaps
 		}
 	}
 	
-	private final boolean intersect(double x, double y, double r, Node node)
+	private boolean intersect(double x, double y, double r, Node node)
 	{
 		// if point is inside cell return true
 		if (x >= node.getXmin() && x <= node.getXmax() && y >= node.getYmin() && y <= node.getYmax())
@@ -567,7 +559,7 @@ public final class GetOverlaps
 			return true;
 		
 		// else check the corner distance
-		final double corner_dist_sq = (centers_dist_x - ds / 2)*(centers_dist_x - ds / 2) + (centers_dist_y - ds / 2)*(centers_dist_y - ds / 2);
+		final double corner_dist_sq = (centers_dist_x - ds / 2) * (centers_dist_x - ds / 2) + (centers_dist_y - ds / 2) * (centers_dist_y - ds / 2);
 		
 		return corner_dist_sq <= r * r;
 	}

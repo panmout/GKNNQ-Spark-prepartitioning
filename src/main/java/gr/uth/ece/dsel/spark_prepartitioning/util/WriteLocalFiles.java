@@ -6,7 +6,7 @@ import java.util.FormatterClosedException;
 
 public final class WriteLocalFiles
 {	
-	public static final void writeFile(String file, String content)
+	public static void writeFile(String file, String content)
 	{
 		try
 		{

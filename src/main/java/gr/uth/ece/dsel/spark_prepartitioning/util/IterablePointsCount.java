@@ -5,7 +5,7 @@ import org.apache.spark.api.java.function.Function;
 public final class IterablePointsCount implements Function<Iterable<Point>, Integer>
 {
 	@Override
-	public final Integer call(Iterable<Point> it)
+	public Integer call(Iterable<Point> it)
 	{
 		int counter = 0;
 		

@@ -8,26 +8,26 @@ import org.apache.spark.util.LongAccumulator;
 
 public final class BfNeighbors implements Function<Iterable<Point>, PriorityQueue<IdDist>>
 {
-	private int k;
-	private ArrayList<Point> qpoints;
-	private double[] mbrCentroid;
-	private PriorityQueue<IdDist> neighbors;
-	private PriorityQueue<IdDist> oldNeighbors;
-	private boolean fastsums;
-	private LongAccumulator dpc_count;
+	private final int k;
+	private final ArrayList<Point> qpoints;
+	private final double[] mbrCentroid;
+	private final PriorityQueue<IdDist> neighbors;
+	private final PriorityQueue<IdDist> oldNeighbors;
+	private final boolean fastsums;
+	private final LongAccumulator dpc_count;
 	
 	public BfNeighbors(int K, double[] mbrC, ArrayList<Point> qp, PriorityQueue<IdDist> pq, boolean fs, LongAccumulator dpc_count)
 	{
 		this.k = K;
-		this.qpoints = new ArrayList<Point>(qp);
+		this.qpoints = new ArrayList<>(qp);
 		this.mbrCentroid = Arrays.copyOf(mbrC, mbrC.length);
-		this.neighbors = new PriorityQueue<IdDist>(pq);
-		this.oldNeighbors = new PriorityQueue<IdDist>(pq);
+		this.neighbors = new PriorityQueue<>(pq);
+		this.oldNeighbors = new PriorityQueue<>(pq);
 		this.fastsums = fs;
 		this.dpc_count = dpc_count;
 	}
 	
-	public final PriorityQueue<IdDist> call(Iterable<Point> iter)
+	public PriorityQueue<IdDist> call(Iterable<Point> iter)
 	{
 		boolean changed = false; // priority queue will be returned only if changed
 		
@@ -79,7 +79,7 @@ public final class BfNeighbors implements Function<Iterable<Point>, PriorityQueu
 	  			} // end if
 	    	} // end else
 		} // end while
-	    if (changed == true)
+	    if (changed)
 	    {
 	    	if (this.oldNeighbors.isEmpty()) // phase 2
 	    		return this.neighbors;
@@ -87,6 +87,6 @@ public final class BfNeighbors implements Function<Iterable<Point>, PriorityQueu
 	    		return GnnFunctions.pqDifference(this.neighbors, this.oldNeighbors);
 	    }
 	    else
-	    	return new PriorityQueue<IdDist>(this.k, new IdDistComparator("max"));
+	    	return new PriorityQueue<>(this.k, new IdDistComparator("max"));
 	} // end gdBfNeighbors
 }

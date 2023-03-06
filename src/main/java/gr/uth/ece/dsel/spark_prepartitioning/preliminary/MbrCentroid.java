@@ -17,12 +17,9 @@ import org.apache.hadoop.fs.FSDataOutputStream;
 public final class MbrCentroid
 {
 	private static String nameNode; // hostname
-	private static String username; // username
 	private static String queryDir; // HDFS dir containing query dataset
 	private static String queryDataset; // query dataset name in HDFS
-	private static String queryDatasetPath; // full HDFS path+name of query dataset
 	private static String gnnDir; // HDFS dir containing GNN files
-	private static String mbrcentroidFileName; // mbrcentroid file name in HDFS
 	private static Formatter outputTextFile; // local output text file
 	private static ArrayList<Point> qPoints; // arraylist for query dataset point objects
 	private static double step; // step size
@@ -32,7 +29,7 @@ public final class MbrCentroid
 	
 	public static void main(String[] args)
 	{
-		Long t0 = System.currentTimeMillis();
+		final long t0 = System.currentTimeMillis();
 		
 		for (String arg: args)
 		{
@@ -62,10 +59,13 @@ public final class MbrCentroid
 			else
 				throw new IllegalArgumentException("not a valid argument, must be \"name=arg\", : " + arg);
 		}
-		
-		username = System.getProperty("user.name");
-		queryDatasetPath = String.format("hdfs://%s:9000/user/%s/%s/%s", nameNode, username, queryDir, queryDataset);
-		mbrcentroidFileName = String.format("hdfs://%s:9000/user/%s/%s/mbrcentroid.txt", nameNode, username, gnnDir);
+
+		// username
+		String username = System.getProperty("user.name");
+		// full HDFS path+name of query dataset
+		String queryDatasetPath = String.format("hdfs://%s:9000/user/%s/%s/%s", nameNode, username, queryDir, queryDataset);
+		// mbrcentroid file name in HDFS
+		String mbrcentroidFileName = String.format("hdfs://%s:9000/user/%s/%s/mbrcentroid.txt", nameNode, username, gnnDir);
 		
 		double xmin = Double.POSITIVE_INFINITY; // MBR
 		double xmax = Double.NEGATIVE_INFINITY;
@@ -82,7 +82,7 @@ public final class MbrCentroid
 			BufferedReader queryBr = new BufferedReader(new InputStreamReader(fs.open(queryPath))); // open HDFS query dataset file
 			outputTextFile = new Formatter("mbrcentroid.txt"); // open local output text file
 			
-			qPoints = new ArrayList<Point>();
+			qPoints = new ArrayList<>();
 			
 			String line;
 			
@@ -184,30 +184,28 @@ public final class MbrCentroid
 			System.err.println("Error writing to file, exiting");
 			System.exit(3);
 		}
-		
-		Long totalTime = System.currentTimeMillis() - t0;
-		
-		System.out.printf("Total time: %d millis\n", totalTime);
+
+		System.out.printf("Total time: %d millis\n", System.currentTimeMillis() - t0);
 	}
 	
-	public final static double thetaQx(double x, double y)
+	public static double thetaQx(double x, double y)
 	{
 		return qPoints.stream().reduce(0.0,
 				(acc, p) -> acc + (x - p.getX())/GnnFunctions.distance(x, y, p.getX(), p.getY()),
-				(acc1, acc2) -> acc1 + acc2);
+				Double::sum);
 	}
 	
-	public final static double thetaQy(double x, double y)
+	public static double thetaQy(double x, double y)
 	{
 		return qPoints.stream().reduce(0.0,
 				(acc, p) -> acc + (y - p.getY())/GnnFunctions.distance(x, y, p.getX(), p.getY()),
-				(acc1, acc2) -> acc1 + acc2);
+				Double::sum);
 	}
 	
-	public final static double distcQ (double x, double y)
+	public static double distcQ (double x, double y)
 	{
 		return qPoints.stream().reduce(0.0,
 				(acc, p) -> acc + GnnFunctions.distance(x, y, p.getX(), p.getY()),
-				(acc1, acc2) -> acc1 + acc2);
+				Double::sum);
 	}
 }

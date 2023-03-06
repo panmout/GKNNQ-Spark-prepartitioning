@@ -19,87 +19,87 @@ public final class Node implements Serializable
 		this.ymax = ymax;
 	}
 	
-	public final int getLow()
+	public int getLow()
 	{
 		return this.low;
 	}
 
-	public final void setLow(int low)
+	public void setLow(int low)
 	{
 		this.low = low;
 	}
 
-	public final int getHigh()
+	public int getHigh()
 	{
 		return this.high;
 	}
 
-	public final void setHigh(int high)
+	public void setHigh(int high)
 	{
 		this.high = high;
 	}
 	
-	public final double getXmin() {
+	public double getXmin() {
 		return this.xmin;
 	}
 
-	public final void setXmin(double xmin) {
+	public void setXmin(double xmin) {
 		this.xmin = xmin;
 	}
 
-	public final double getXmax() {
+	public double getXmax() {
 		return this.xmax;
 	}
 
-	public final void setXmax(double xmax) {
+	public void setXmax(double xmax) {
 		this.xmax = xmax;
 	}
 
-	public final double getYmin() {
+	public double getYmin() {
 		return this.ymin;
 	}
 
-	public final void setYmin(double ymin) {
+	public void setYmin(double ymin) {
 		this.ymin = ymin;
 	}
 
-	public final double getYmax() {
+	public double getYmax() {
 		return this.ymax;
 	}
 
-	public final void setYmax(double ymax) {
+	public void setYmax(double ymax) {
 		this.ymax = ymax;
 	}
 
-	public final Node getNW() {
+	public Node getNW() {
 		return this.nw;
 	}
 
-	public final void setNW(Node nW) {
+	public void setNW(Node nW) {
 		this.nw = nW;
 	}
 
-	public final Node getNE() {
+	public Node getNE() {
 		return this.ne;
 	}
 
-	public final void setNE(Node nE) {
+	public void setNE(Node nE) {
 		this.ne = nE;
 	}
 
-	public final Node getSW() {
+	public Node getSW() {
 		return this.sw;
 	}
 
-	public final void setSW(Node sW) {
+	public void setSW(Node sW) {
 		this.sw = sW;
 	}
 
-	public final Node getSE() {
+	public Node getSE() {
 		return this.se;
 	}
 
-	public final void setSE(Node sE) {
+	public void setSE(Node sE) {
 		this.se = sE;
 	}
 	
